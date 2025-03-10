@@ -14,7 +14,7 @@ This tool streamlines payload execution by leveraging indirect system calls whil
    
 3. Build AES-Encryption Tool & Run It
 
-4. Upload the generated Data.Enc file to your preferred web domain.
+4. Upload the generated Data.Enc file to your chosen web domain. (Ex; you might start with a local server or use a web front, such as a Discord share link)
 
 5. Edit ShadowRust source file and specify your URL + AES Key used to encrypt your payload.
 
