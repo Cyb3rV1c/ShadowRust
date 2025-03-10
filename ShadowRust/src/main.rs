@@ -298,8 +298,8 @@ fn main() {
           // --- Decryption Section ---
         // Define your AES key and IV.
         // IMPORTANT: Replace these example values with the ones used during encryption.
-        let key: [u8; 32] = [0xAB; 32]; // Example: all zeros (use your actual 32-byte key)
-        let iv: [u8; 16] = [0x12; 16];   // Example: all zeros (use your actual 16-byte IV)
+        let key: [u8; 32] = [0x00; 32]; // Example: all zeros (use your actual 32-byte key)
+        let iv: [u8; 16] = [0x00; 16];   // Example: all zeros (use your actual 16-byte IV)
 
         println!("[i] Decrypting the AES encrypted data");
         // Create a mutable slice from the allocated memory
