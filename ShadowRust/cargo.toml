@@ -1,0 +1,29 @@
+[package]
+name = "ShadowRust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aes = "0.7"
+block-modes = "0.8"
+#hex_literal = "0.3"  # Optional: only if you use the hex_literal macros for key/IV initialization
+winapi = { version = "0.3", features = [
+    "libloaderapi",        # For GetModuleHandleA, GetProcAddress
+    "wininet",             # For InternetOpenW, InternetOpenUrlW, InternetReadFile, InternetSetOptionW
+    "handleapi",           # For CloseHandle
+    "errhandlingapi",      # For GetLastError
+    "processthreadsapi",   # For GetCurrentProcess
+    "memoryapi",           # For VirtualAlloc, VirtualFree
+    "winnt",               # For HANDLE, MEM_COMMIT, MEM_RESERVE, PAGE_EXECUTE_READWRITE
+    "synchapi",            # For WaitForSingleObject
+    "ntdef"                # For NTSTATUS, PCWSTR
+] }
+
+[build-dependencies]
+cc = "1.0"  # Required if compiling assembly (`.asm`) files
+
+[profile.dev]
+panic = "unwind"
+
+[profile.release]
+panic = "abort"
