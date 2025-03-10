@@ -8,7 +8,7 @@ This tool streamlines payload execution by leveraging indirect system calls whil
 
 
 # Usage
-1. Git clone Repo
+1. Clone Repo
 
 2. Encrypt First Your Payload Locally With AES-Encryption Tool. By Specifing in its code the path to your shellcode file & Specify AES Key.
    
